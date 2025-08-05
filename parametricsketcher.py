@@ -169,5 +169,5 @@ ani = FuncAnimation(fig, update, frames=np.linspace(0.0001, 13.9999, 200), inter
 
 #writer = FFMpegWriter(fps=30, metadata=dict(artist='Umut'), bitrate=1800)
 #ani.save("BatmanLogo.mp4", writer=writer)
-
+#finish
 plt.show()
