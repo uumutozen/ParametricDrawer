@@ -166,7 +166,7 @@ def update(t):
     ax.text2D(1.10, 0.15, f"Z: {0.00 if abs(end_z) < 1e-2 else end_z:.2f}", transform=ax.transAxes, fontsize=10)
 
 ani = FuncAnimation(fig, update, frames=np.linspace(0.0001, 13.9999, 200), interval=50)
-
+#
 #writer = FFMpegWriter(fps=30, metadata=dict(artist='Umut'), bitrate=1800)
 #ani.save("BatmanLogo.mp4", writer=writer)
 #finish
