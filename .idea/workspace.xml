@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5761d58d-d1bf-4a9c-b0f5-14c3aa841ea5" name="Changes" comment=" Finalize G-code animation" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;hopepohe&quot;
+  }
+}</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="56d7a34c-7fce-4316-bf6b-3a062610d057" />
+  </component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/hopepohe/graduation-project.git&quot;,
+    &quot;accountId&quot;: &quot;56d7a34c-7fce-4316-bf6b-3a062610d057&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2wRpXvaHnA8UOSlvmVf8XLhJAxj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.DENEME.executor&quot;: &quot;Run&quot;,
+    &quot;Python.batmançizenkol.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boardDrawerV1.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boarddrawerV2-Batman-Error.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boarddrawerV2-BatmanSomeErrorSolved.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boarddrawerV2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boarddrawerdeneme1-bk.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boarddrawerdeneme2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.boarddrawerdeneme3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.ehehe.executor&quot;: &quot;Run&quot;,
+    &quot;Python.gcode-scatter(2025.01.06).v2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.parametricsketcher.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scratch_2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scratch_3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scratch_4.executor&quot;: &quot;Run&quot;,
+    &quot;Python.yapayzeka.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Umut/Desktop/math 4079&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Python&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Umut\Desktop\math 4079" />
+      <recent name="C:\Users\Umut\Desktop\Math4070" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="gcode-scatter(2025.01.06).v2" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="Math4070" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../math 4079" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../math 4079/gcode-scatter(2025.01.06).v2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-PY-243.22562.220" />
+        <option value="bundled-python-sdk-0fc6c617c4bd-9a18a617cbe4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-243.22562.220" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5761d58d-d1bf-4a9c-b0f5-14c3aa841ea5" name="Changes" comment="" />
+      <changelist id="" name="change" comment="" />
+      <created>1746014284073</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746014284073</updated>
+      <workItem from="1746014285205" duration="287000" />
+      <workItem from="1746217938851" duration="884000" />
+      <workItem from="1746542035824" duration="802000" />
+      <workItem from="1746542945962" duration="33000" />
+      <workItem from="1746542984394" duration="344000" />
+      <workItem from="1746543349919" duration="19000" />
+      <workItem from="1746543418926" duration="252000" />
+      <workItem from="1746651517191" duration="131000" />
+      <workItem from="1746654000645" duration="3917000" />
+      <workItem from="1747498357665" duration="7391000" />
+      <workItem from="1747510596913" duration="673000" />
+      <workItem from="1747511353889" duration="49000" />
+      <workItem from="1747591140652" duration="5990000" />
+      <workItem from="1747655747502" duration="3213000" />
+      <workItem from="1749574055238" duration="1990000" />
+      <workItem from="1749921787419" duration="110000" />
+      <workItem from="1750081197702" duration="189000" />
+      <workItem from="1750081960098" duration="275000" />
+      <workItem from="1750082455416" duration="1758000" />
+      <workItem from="1750172409845" duration="35000" />
+      <workItem from="1750266154344" duration="3654000" />
+      <workItem from="1750271563788" duration="21069000" />
+      <workItem from="1750878055070" duration="307000" />
+      <workItem from="1750880018015" duration="68000" />
+      <workItem from="1753025288801" duration="145000" />
+      <workItem from="1754419156809" duration="1657000" />
+      <workItem from="1754422091838" duration="3833000" />
+    </task>
+    <task id="LOCAL-00001" summary="graduation project-2">
+      <option name="closed" value="true" />
+      <created>1754419939479</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1754419939479</updated>
+    </task>
+    <task id="LOCAL-00002" summary="graduation project-2">
+      <option name="closed" value="true" />
+      <created>1754420013845</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1754420013845</updated>
+    </task>
+    <task id="LOCAL-00003" summary="graduation project-2">
+      <option name="closed" value="true" />
+      <created>1754420109517</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1754420109517</updated>
+    </task>
+    <task id="LOCAL-00004" summary="graduation project-2">
+      <option name="closed" value="true" />
+      <created>1754420123221</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1754420123221</updated>
+    </task>
+    <task id="LOCAL-00005" summary="graduation project-2">
+      <option name="closed" value="true" />
+      <created>1754420429060</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1754420429060</updated>
+    </task>
+    <task id="LOCAL-00006" summary="graduation project-2">
+      <option name="closed" value="true" />
+      <created>1754420442973</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1754420442973</updated>
+    </task>
+    <task id="LOCAL-00007" summary="graduation project-2">
+      <option name="closed" value="true" />
+      <created>1754420518105</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1754420518105</updated>
+    </task>
+    <task id="LOCAL-00008" summary="graduation project-2">
+      <option name="closed" value="true" />
+      <created>1754422429576</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1754422429576</updated>
+    </task>
+    <task id="LOCAL-00009" summary="graduation project-2">
+      <option name="closed" value="true" />
+      <created>1754422477129</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1754422477129</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Complete 3-axis robotic arm drawing system">
+      <option name="closed" value="true" />
+      <created>1754422613418</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1754422613418</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Complete 3-axis robotic arm drawing system">
+      <option name="closed" value="true" />
+      <created>1754422821646</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1754422821646</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Complete 3-axis robotic arm drawing system">
+      <option name="closed" value="true" />
+      <created>1754422901623</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1754422901623</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Complete 3-axis robotic arm drawing system">
+      <option name="closed" value="true" />
+      <created>1754423932478</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1754423932478</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Complete 3-axis robotic arm drawing system">
+      <option name="closed" value="true" />
+      <created>1754423981898</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1754423981898</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Complete 3-axis robotic arm drawing system">
+      <option name="closed" value="true" />
+      <created>1754424130107</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1754424130107</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Complete 3-axis robotic arm drawing system">
+      <option name="closed" value="true" />
+      <created>1754424203365</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1754424203365</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Complete 3-axis robotic arm drawing system">
+      <option name="closed" value="true" />
+      <created>1754424537035</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1754424537035</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Complete 3-axis robotic arm drawing system">
+      <option name="closed" value="true" />
+      <created>1754424921970</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1754424921970</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Complete 3-axis robotic arm drawing system">
+      <option name="closed" value="true" />
+      <created>1754425243644</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1754425243644</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Complete 3-axis robotic arm drawing system">
+      <option name="closed" value="true" />
+      <created>1754425257522</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1754425257522</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Complete 3-axis robotic arm drawing system">
+      <option name="closed" value="true" />
+      <created>1754425290495</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1754425290495</updated>
+    </task>
+    <task id="LOCAL-00022" summary=" Finalize G-code animation">
+      <option name="closed" value="true" />
+      <created>1754425908521</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1754425908521</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="graduation project-2" />
+    <MESSAGE value="Complete 3-axis robotic arm drawing system" />
+    <MESSAGE value=" Finalize G-code animation" />
+    <option name="LAST_COMMIT_MESSAGE" value=" Finalize G-code animation" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/boarddrawerV2_BatmanSomeErrorSolved_py$scratch_4.coverage" NAME="scratch_4 Coverage Results" MODIFIED="1750289413682" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/boardDrawerV1_py$boardDrawerV1.coverage" NAME="boardDrawerV1 Coverage Results" MODIFIED="1746543666317" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/boarddrawerV2_Batman_Error_py$boarddrawerdeneme2.coverage" NAME="boarddrawerdeneme2 Coverage Results" MODIFIED="1747502901496" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Math4070$boarddrawerdeneme1_bk.coverage" NAME="boarddrawerdeneme1-bk Coverage Results" MODIFIED="1746014540850" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/boarddrawerV2_BatmanSomeErrorSolved_py$yapayzeka.coverage" NAME="yapayzeka Coverage Results" MODIFIED="1749574853599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/boarddrawerV2_BatmanSomeErrorSolved_py$ehehe.coverage" NAME="ehehe Coverage Results" MODIFIED="1749921798092" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/boarddrawerV2_py$boarddrawerV2.coverage" NAME="boarddrawerV2 Coverage Results" MODIFIED="1746657644072" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/parametricsketcher_py$parametricsketcher.coverage" NAME="parametricsketcher Coverage Results" MODIFIED="1753025293508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/boarddrawerV2_BatmanSomeErrorSolved_py$scratch_2.coverage" NAME="scratch_2 Coverage Results" MODIFIED="1749574511580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/boarddrawerV2_Batman_Error_py$boarddrawerV2_Batman_Error.coverage" NAME="boarddrawerV2-Batman-Error Coverage Results" MODIFIED="1747502664645" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/boarddrawerV2_Batman_Error_py$boardDrawerV1.coverage" NAME="boardDrawerV1 Coverage Results" MODIFIED="1747502914780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/boarddrawerV2_py$DENEME.coverage" NAME="DENEME Coverage Results" MODIFIED="1746654481304" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/boarddrawerV2_Batman_Error_py$batmançizenkol.coverage" NAME="batmançizenkol Coverage Results" MODIFIED="1747504451658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/boarddrawerdeneme3_py$boarddrawerdeneme3.coverage" NAME="boarddrawerdeneme3 Coverage Results" MODIFIED="1746542675593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/boarddrawerV2_Batman_Error_py$boarddrawerV2.coverage" NAME="boarddrawerV2 Coverage Results" MODIFIED="1747502927306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/boarddrawerV2_Batman_Error_py$ehehe.coverage" NAME="ehehe Coverage Results" MODIFIED="1747502644385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads" />
+    <SUITE FILE_PATH="coverage/boarddrawerV2_Batman_Error_py$boarddrawerV2_BatmanSomeErrorSolved.coverage" NAME="boarddrawerV2-BatmanSomeErrorSolved Coverage Results" MODIFIED="1747505919165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/boarddrawerV2_BatmanSomeErrorSolved_py$scratch_3.coverage" NAME="scratch_3 Coverage Results" MODIFIED="1750281887088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
+    <SUITE FILE_PATH="coverage/boarddrawerV2_BatmanSomeErrorSolved_py$boarddrawerV2_BatmanSomeErrorSolved.coverage" NAME="boarddrawerV2-BatmanSomeErrorSolved Coverage Results" MODIFIED="1750878344063" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.." />
+  </component>
+</project>
