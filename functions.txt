@@ -1,0 +1,225 @@
+
+
+---------------------------------------------------------------------------------------
+kelebek
+
+def r_t(t):
+    return np.exp(np.sin(t)) - 2*np.cos(4*t) + np.sin((2*t - np.pi)/24)**5
+
+def x_t(t): return np.zeros_like(t)
+
+
+def y_t(t):
+    return r_t(t) * np.cos(t)
+
+def z_t(t):
+    return r_t(t) * np.sin(t)+9
+
+
+-----------------------------------------------------------------------------------------
+4 yapraklı yonca
+
+def x_t(t):
+    return np.zeros_like(t)
+
+def y_t(t):
+    return (np.sqrt(np.abs(np.cos(2*t))) * np.cos(t))*2
+
+def z_t(t):
+    return (np.sqrt(np.abs(np.cos(2*t))) * np.sin(t))*2+9
+
+---------------------------------------------------------------------------------------
+
+
+k = 4 # 8 yapraklı bir çiçek
+
+def x_t(t):
+    return np.zeros_like(t)
+
+def y_t(t):
+    return (np.cos(k * t) * np.cos(t))*2.5
+
+def z_t(t):
+    return (np.cos(k * t) * np.sin(t))*2.5+9
+
+---------------------------------------------------------------------------------------
+
+# --- Koch Snowflake Üretimi (2 boyut) ---
+def koch_snowflake(order, scale=5):
+    def koch_curve(p1, p2, depth):
+        if depth == 0:
+            return [p1, p2]
+        else:
+            p1, p2 = np.array(p1), np.array(p2)
+            delta = (p2 - p1) / 3
+            pA = p1 + delta
+            pB = p1 + 2 * delta
+
+            angle = np.pi / 3
+            pC = pA + np.array([
+                np.cos(angle) * delta[0] - np.sin(angle) * delta[1],
+                np.sin(angle) * delta[0] + np.cos(angle) * delta[1]
+            ])
+
+            return (
+                koch_curve(p1, pA, depth - 1)[:-1] +
+                koch_curve(pA, pC, depth - 1)[:-1] +
+                koch_curve(pC, pB, depth - 1)[:-1] +
+                koch_curve(pB, p2, depth - 1)
+            )
+
+    # Eşkenar üçgenin köşeleri (y, z düzlemine yerleştiriyoruz)
+    p1 = [0, 0]
+    p2 = [scale, 0]
+    height = np.sqrt(3) / 2 * scale
+    p3 = [scale / 2, height]
+
+    points = (
+        koch_curve(p1, p2, order)[:-1] +
+        koch_curve(p2, p3, order)[:-1] +
+        koch_curve(p3, p1, order)
+    )
+
+    return np.array(points)
+
+# Noktaları al
+points = koch_snowflake(order=2)
+y_vals = points[:, 0]
+z_vals = points[:, 1]
+x_vals = np.zeros_like(y_vals)  # Sabit X
+
+# t değerlerini normalize et
+t_vals = np.linspace(0, 2 * np.pi, len(y_vals))
+
+# İnterpolasyon fonksiyonları (t → y, z)
+y_interp = interp1d(t_vals, y_vals, kind='linear', fill_value="extrapolate")
+z_interp = interp1d(t_vals, z_vals, kind='linear', fill_value="extrapolate")
+
+# --- FONKSİYONLAR ---
+def x_t(t): return 0 * t  # Sabit 0
+def y_t(t): return y_interp(t % (2 * np.pi))-3
+def z_t(t): return z_interp(t % (2 * np.pi))+7
+---------------------------------------------------------------------------------------------------------------------------------
+def batmanlogo_scalar(t):
+    pi = np.pi
+    def transform(x, y):
+        return [x / 2, y / 2 + 8]
+
+    if 0 <= t < 1:
+        return transform(0.6 * t, 4)
+    elif 1 <= t < 2:
+        return transform(0.6 + 0.6 * (t - 1), 4 + 0.94 * (t - 1))
+    elif 2 <= t < 3:
+        return transform(1.2, 4.9434 - 1.4434 * (t - 2))
+    elif 3 <= t < 4:
+        s = (0.576 + pi) * (t - 3) - pi
+        return transform(1.52 * np.cos(s) + 2.72, 1.52 * np.sin(s) + 3.5)
+    elif 4 <= t < 5:
+        return transform(8 * np.cos(1.83 * (5 - t) - 0.785), 5 * np.sin(1.83 * (5 - t) - 0.785))
+    elif 5 <= t < 6:
+        s = 4.4 + 2.26 * (6 - t)
+        return transform(-12.43 + 5.212 * s - 0.375 * s**2, -21.52 + 7.03 * s - 0.65 * s**2)
+    elif 6 <= t < 7:
+        s = 3.25 * (7 - t)
+        return transform(s, -2 - 0.75 * (s - 2)**2)
+    elif 7 <= t < 8:
+        s = 3.25 * (t - 7)
+        return transform(-s, -2 - 0.75 * (s - 2)**2)
+    elif 8 <= t < 9:
+        s = 4.4 + 2.26 * (t - 8)
+        return transform(12.43 - 5.212 * s + 0.375 * s**2, -21.52 + 7.03 * s - 0.65 * s**2)
+    elif 9 <= t < 10:
+        s = 1.83 * (t - 9) - 0.785
+        return transform(-8 * np.cos(s), 5 * np.sin(s))
+    elif 10 <= t < 11:
+        s = (0.576 + pi) * (11 - t) - pi
+        return transform(-1.52 * np.cos(s) - 2.72, 1.52 * np.sin(s) + 3.5)
+    elif 11 <= t < 12:
+        return transform(-1.2, 4.9434 - 1.4434 * (12 - t))
+    elif 12 <= t < 13:
+        return transform(-0.6 - 0.6 * (13 - t), 4 + 0.94 * (13 - t))
+    elif 13 <= t < 14:
+        return transform(-0.6 * (14 - t), 4)
+    else:
+        return [0, 0]
+
+def batmanlogo(t):
+    t = np.asarray(t)
+    if t.ndim == 0:
+        return batmanlogo_scalar(t)
+    else:
+        result = np.array([batmanlogo_scalar(ti) for ti in t])
+        return result[:, 0], result[:, 1]
+
+def batmanlogo3d(t):
+    x, y = batmanlogo(t)
+    return [0 * np.array(x), x, y]
+
+def x_t(t): return batmanlogo3d(t)[0]
+def y_t(t): return batmanlogo3d(t)[1]
+def z_t(t): return batmanlogo3d(t)[2]
+--------------------------------------------------------------------------------------------------------------------------
+heart
+def x_t(t):
+    return np.zeros_like(t)
+
+def y_t(t):
+    return (16 * np.sin(t)**3) * 0.2
+
+def z_t(t):
+    heart = 13 * np.cos(t) - 5 * np.cos(2 * t) - 2 * np.cos(3 * t) - np.cos(4 * t)
+    heart_scaled = heart * 0.2 +9
+    return heart_scaled
+---------------------------------------------------------------------------------------------------------------------------
+def patrick_star_scalar(t):
+    # 5 kollu yıldız, t in [0, 1]
+    # Kollar saat yönünde, düzgün dağılmış
+    num_points = 5
+    outer_radius = 4
+    inner_radius = 2
+    angle_offset = np.pi / 2  # üst noktadan başlasın
+
+    # Yıldızın köşe noktalarını hesapla
+    points = []
+    for i in range(2 * num_points):
+        angle = angle_offset + i * np.pi / num_points
+        r = outer_radius if i % 2 == 0 else inner_radius
+        x = r * np.cos(angle)
+        y = r * np.sin(angle)
+        points.append((x, y))
+
+    # Kapalı yol için tekrar başa dön
+    points.append(points[0])
+
+    # t ∈ [0, 1] olacak şekilde her kenar segmentine yayıl
+    total_segments = len(points) - 1
+    segment_length = 1 / total_segments
+    idx = int(t / segment_length)
+    idx = min(idx, total_segments - 1)
+
+    local_t = (t - idx * segment_length) / segment_length
+    x0, y0 = points[idx]
+    x1, y1 = points[idx + 1]
+
+    x = (1 - local_t) * x0 + local_t * x1
+    y = (1 - local_t) * y0 + local_t * y1
+
+    # Merkezi yukarı al (kamera hizası)
+    return [x, y + 8.5]  # Z koordinatı +9 (tahta yüksekliğinin ortası)
+
+def patrick_star(t):
+    t = np.asarray(t)
+    if t.ndim == 0:
+        return patrick_star_scalar(t)
+    else:
+        result = np.array([patrick_star_scalar(ti) for ti in t])
+        return result[:, 0], result[:, 1]
+
+def patrick_star_3d(t):
+    y, z = patrick_star(t)
+    return [0 , y, z]  # X sabit, Y = y, Z = x
+
+
+def x_t(t): return patrick_star_3d(t)[0]
+def y_t(t): return patrick_star_3d(t)[1]
+def z_t(t): return patrick_star_3d(t)[2]
