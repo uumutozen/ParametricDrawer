@@ -1,0 +1,15 @@
+\begin{thebibliography}{}
+
+\bibitem[Allaire and Kaber, 2008]{marlinfwweb}
+Allaire, G. and Kaber, S. M. (2011).
+\newblock Numerical Linear Algebra.
+
+\bibitem[van der Zalm, 2011]{marlinfwweb}
+van der Zalm, E. (2011).
+\newblock Marlin Firmware.
+
+\bibitem[van Rossum, 1991]{pythonweb}
+van Rossum, G. (1991).
+\newblock Python.
+
+\end{thebibliography}

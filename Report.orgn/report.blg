@@ -1,0 +1,62 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: report.aux
+The style file: apalike.bst
+Database file #1: report-bibliography.bib
+Warning--entry type for "pythonweb" isn't style-file defined
+--line 10 of file report-bibliography.bib
+Warning--entry type for "marlinfwweb" isn't style-file defined
+--line 18 of file report-bibliography.bib
+You're missing a field name---line 19 of file report-bibliography.bib
+ : 
+ : %  author = {Erik van der Zalm},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 26 of file report-bibliography.bib
+ : @article {marlinfwweb
+ :                      ,
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in marlinfwweb
+Warning--empty year in marlinfwweb
+You've used 2 entries,
+            1935 wiz_defined-function locations,
+            476 strings with 3729 characters,
+and the built_in function-call counts, 432 in all, are:
+= -- 41
+> -- 7
+< -- 1
++ -- 2
+- -- 2
+* -- 28
+:= -- 78
+add.period$ -- 3
+call.type$ -- 2
+change.case$ -- 10
+chr.to.int$ -- 2
+cite$ -- 5
+duplicate$ -- 20
+empty$ -- 34
+format.name$ -- 3
+if$ -- 79
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 10
+num.names$ -- 3
+pop$ -- 14
+preamble$ -- 1
+purify$ -- 11
+quote$ -- 0
+skip$ -- 16
+stack$ -- 0
+substring$ -- 25
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 12
+warning$ -- 2
+while$ -- 2
+width$ -- 0
+write$ -- 18
+(There were 2 error messages)

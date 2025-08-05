@@ -1,0 +1,507 @@
+\documentclass[10pt,tikzpicture,notheorems]{beamer}
+
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage[backend=bibtex,maxbibnames=9,maxcitenames=4]{biblatex} %giveninits=true,
+\usepackage{etoolbox}
+\usepackage{filecontents}
+\usepackage{mathtools}
+\usepackage{ragged2e}
+\justifying
+
+\usepackage{changepage}
+\usepackage{xcolor}
+\definecolor{pythongreen}{RGB}{106,160,93}
+\definecolor{pythonorange}{RGB}{217,118,27}
+\definecolor{pythongray}{RGB}{140,139,135}
+\usepackage{listings}
+\definecolor{codegreen}{rgb}{0.43,0.57,0.49}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.4,0.43,0.58}
+\definecolor{codeorange}{rgb}{0.70,0.57,0.51}
+%\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\definecolor{backcolour}{rgb}{0.11,0.12,0.13}
+\definecolor{plaincode}{rgb}{0.69,0.72,0.75}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{codeorange},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize\color{plaincode},
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+\setbeamerfont{quote}{shape=\upshape,family=\ttfamily}
+
+
+%\inserttheoremnumber
+
+
+\usetheme{Warsaw}
+\usecolortheme{whale}
+
+\let\Tiny=\tiny
+
+\hypersetup{bookmarksdepth=4,bookmarksnumbered=true,bookmarksopen=true}
+
+\beamertemplatenavigationsymbolsempty
+
+\setbeamersize{text margin left=5mm,text margin right=5mm}
+
+\setbeamertemplate{qed symbol}{\rule{0.2cm}{0.2cm}}
+\setbeamertemplate{theorems}[numbered]
+\setbeamertemplate{caption}[numbered]
+%\setbeamertemplate{enumerate item}{(\roman{enumi})}
+
+\setbeamertemplate{background canvas}[vertical shading][bottom=white!10,top=blue!10]
+\usefonttheme[onlymath]{serif}
+
+\makeatletter
+\renewcommand\eqref[1]{%
+  \textup{\usebeamercolor[fg]{structure}\tagform@{\ref{#1}}}%
+}
+
+%\DefineBibliographyStrings{english}{%
+%  references = {Kaynak\c{c}a},
+%  and = {ve},
+%  andothers = {vd.}
+%}
+
+\DefineBibliographyExtras{english}{
+  \let\finalandcomma=\empty
+}
+
+%\undef{\theorem}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+
+%\undef{\lemma}
+\newtheorem{lemma}{Lemma}
+
+%\undef{\example}
+\theoremstyle{example}
+\newtheorem{example}{Example}
+
+%\undef{\definition}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\newtheorem{property}{Property}
+
+%
+
+%http://tex.stackexchange.com/a/123992/9955
+\makeatletter
+\def\th@remark{%
+    \normalfont % body font
+    \setbeamercolor{block title alert}{use=alerted text,fg=white,bg=alerted text.fg!75!black}
+    \setbeamercolor{block body alert}{parent=normal text,use=block title alerted,bg=block title alerted.bg!10!bg}
+    \def\inserttheoremblockenv{alertblock}
+  }
+\makeatother
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+%\setbeamertemplate{bibliography item}[text]
+
+\setbeamertemplate{bibliography item}{%
+  \ifboolexpr{test {\ifentrytype{book}} or test {\ifentrytype{thesis}}}
+    {\setbeamertemplate{bibliography item}[book]}
+    {\ifentrytype{online}
+       {\setbeamertemplate{bibliography item}[online]}
+       {\setbeamertemplate{bibliography item}[article]}}%
+  \usebeamertemplate{bibliography item}
+}
+
+\defbibenvironment{bibliography}
+  {\list{}
+     {\settowidth{\labelwidth}{\usebeamertemplate{bibliography item}}%
+      \setlength{\leftmargin}{\labelwidth}%
+      \setlength{\labelsep}{\biblabelsep}%
+      \addtolength{\leftmargin}{\labelsep}%
+      \setlength{\itemsep}{\bibitemsep}%
+      \setlength{\parsep}{\bibparsep}}}%
+  {\endlist}
+  {\item}
+
+%http://tex.stackexchange.com/questions/28760/custom-beamer-blocks
+\newenvironment<>{refblock}[1]{%
+  \begin{actionenv}#2%
+      \def\insertblocktitle{#1}%
+      \par%
+      \mode<presentation>{%
+       \setbeamercolor{block title}{fg=white,bg=orange!20!black}
+       \setbeamercolor{block body}{fg=black,bg=yellow!20}
+     }%
+      \vfill
+      \usebeamertemplate{block begin}}
+    {\par\usebeamertemplate{block end}\end{actionenv}}
+
+\newenvironment<>{tableblock}[1]{%
+  \begin{actionenv}#2%
+      \def\insertblocktitle{#1}%
+      \par%
+      \mode<presentation>{%
+    \setbeamercolor{block title}{fg=white,bg=orange}
+    \setbeamercolor{block body}{fg=black,bg=orange!20}
+     }%
+      \vfill
+      \usebeamertemplate{block begin}}
+    {\par\usebeamertemplate{block end}\end{actionenv}}
+
+\renewcommand*{\newunitpunct}{\addcomma\space}
+
+\DeclareFieldFormat[article]{title}{#1}
+\DeclareFieldFormat[article]{citetitle}{#1}
+\DeclareFieldFormat[article]{volume}{\mkbibbold{#1}} %\bibstring{volume}\,{#1}
+\DeclareFieldFormat[article]{number}{\bibstring{number}\thinspace{#1}}
+\DeclareFieldFormat[article]{year}{\mkbibparens{#1}}
+\DeclareFieldFormat[article]{pages}{#1}
+
+\DeclareFieldFormat[book]{title}{#1} %\mkbibemph{#1}
+\DeclareFieldFormat[book]{citetitle}{#1} %\mkbibemph{#1}
+\DeclareFieldFormat[book]{pages}{#1}
+\DeclareFieldFormat[book]{volume}{\bibstring{volume}\thinspace{#1}}
+
+\DeclareFieldFormat[incollection]{title}{#1}
+\DeclareFieldFormat[incollection]{citetitle}{#1}
+\DeclareFieldFormat[incollection]{booktitle}{#1} %\mkbibemph{#1}
+\DeclareFieldFormat[incollection]{pages}{#1}
+
+\DeclareFieldFormat[inproceedings]{title}{#1}
+\DeclareFieldFormat[inproceedings]{citetitle}{#1}
+\DeclareFieldFormat[inproceedings]{booktitle}{#1} %\mkbibemph{#1}
+\DeclareFieldFormat[inproceedings]{pages}{#1}
+
+\DeclareFieldFormat[thesis]{title}{#1} %\mkbibemph{#1}
+\DeclareFieldFormat[thesis]{citetitle}{#1} %\mkbibemph{#1}
+\DeclareFieldFormat[thesis]{pages}{#1}
+\DeclareFieldFormat[thesis]{annote}{#1}
+\DeclareFieldFormat[online]{title}{#1}
+\DeclareFieldFormat[online]{citetitle}{#1}
+\DeclareFieldFormat[online]{url}{\url{#1}} %\mkbibacro{URL}\addcolon\space\url{#1}
+
+
+\renewbibmacro{in:}{}
+
+
+\renewbibmacro*{journal+issuetitle}{%
+  \printfield{journaltitle}%
+  \setunit*{\space}%
+  \printfield{volume}%
+  \setunit*{\space}%
+  \printfield{year}% Added
+  \setunit*{\addcomma\space}%
+  \printfield{number}%
+  \newunit
+}
+
+\renewbibmacro*{publisher+location+date}{%
+    \printlist{publisher}%
+    \setunit*{\addcomma\space}%
+    \printlist{location}%
+    \setunit*{\addcomma\space}%
+    \printdate%
+}
+
+\newenvironment{referencelist}{%
+ \setbeamerfont{description item}{size=\tiny}
+ \setbeamersize{description width=0cm}
+ \begin{description}\tiny}{\end{description}
+}
+
+\newenvironment{articleitem}[1]{%
+ {\usebeamercolor[fg]{bibliography entry author}\usebeamerfont{bibliography entry author}\cite{#1}}
+ {\usebeamercolor[fg]{bibliography entry author}\usebeamerfont{bibliography entry author}\citeauthor{#1},}
+ {\usebeamercolor[fg]{bibliography entry title}\usebeamerfont{bibliography entry title}\citetitle{#1},}
+ {\usebeamercolor[fg]{bibliography entry location}\usebeamerfont{bibliography entry location}\citefield{#1}[article]{journaltitle}, \citefield{#1}[article]{volume} \citeyear{#1}, \citefield{#1}[article]{number}, \citefield{#1}{pages}.}
+}
+
+
+\newenvironment{bookitem}[1]{%
+ {\usebeamercolor[fg]{bibliography entry author}\usebeamerfont{bibliography entry author}\cite{#1}}
+ {\usebeamercolor[fg]{bibliography entry author}\usebeamerfont{bibliography entry author}\citeauthor{#1},}
+ {\usebeamercolor[fg]{bibliography entry title}\usebeamerfont{bibliography entry title}\citetitle{#1},}
+ {\usebeamercolor[fg]{bibliography entry location}\usebeamerfont{bibliography entry location}\citelist{#1}{publisher}, \citeyear{#1}.}
+}
+
+
+\newenvironment{thesisitem}[1]{%
+ {\usebeamercolor[fg]{bibliography entry author}\usebeamerfont{bibliography entry author}\cite{#1}}
+ {\usebeamercolor[fg]{bibliography entry author}\usebeamerfont{bibliography entry author}\citeauthor{#1},}
+ {\usebeamercolor[fg]{bibliography entry title}\usebeamerfont{bibliography entry title}\citetitle{#1},}
+ {\usebeamercolor[fg]{bibliography entry location}\usebeamerfont{bibliography entry location}\citefield{#1}[thesis]{type}, \citelist{#1}{institution}, \citeyear{#1}.}
+}
+
+\newenvironment{webitem}[1]{%
+ {\usebeamercolor[fg]{bibliography entry author}\usebeamerfont{bibliography entry author}\cite{#1}}
+ {\usebeamercolor[fg]{bibliography entry author}\usebeamerfont{bibliography entry author}\citeauthor{#1},}
+ {\usebeamercolor[fg]{bibliography entry title}\usebeamerfont{bibliography entry title}\citetitle{#1},}
+ {\usebeamercolor[fg]{bibliography entry location}\usebeamerfont{bibliography entry location}\citeurl{#1}.}
+}
+
+%\addbibresource{\jobname.bib}
+
+\DeclareMathOperator{\Log}{Log}
+
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\dD}{\mathrm{D}}
+\newcommand{\ef}{\mathrm{e}}
+\newcommand{\imn}{\mathrm{i}}
+\newcommand{\Lop}{\mathrm{L}}
+\newcommand{\Iop}{\mathrm{I}}
+
+\newcommand{\cnt}[1]{\mathrm{C}^{#1}}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+
+\renewcommand{\Re}{\operatorname{Re}}
+\renewcommand{\Im}{\operatorname{Im}}
+
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+
+\title[{\makebox[.45\paperwidth]{GCode Animation with \texttt{Python} \hfill%
+\insertframenumber/\inserttotalframenumber}}]{GCode Animation with \texttt{Python}:\\ G0-G1, G2-G3, G05\footnote{Supervisor: Dr.~Ba\c{s}ak Karpuz}}
+
+\titlegraphic{\includegraphics[width=0.15\textwidth]{deulogo.eps}}
+%\titlegraphic{\includegraphics[width=0.20\textwidth,natwidth=433,natheight=405]{deulogo.png}}
+
+\author[U.~\"{O}zen]{Umut \"{O}zen}
+
+\institute{Department of Mathematics,\\
+Dokuz Eyl\"{u}l University.
+%\.{I}zmir, Turkey.
+} %35160
+
+\date{2024-2025 - Fall Semester}
+
+\begin{document}
+
+\begin{frame}{}{}
+
+\titlepage
+
+\end{frame}
+
+%
+
+\begin{frame}{}{}
+\frametitle{\abstractname}
+
+\begin{block}{\abstractname}
+In this presentation,
+we introduce some GCodes for CNC (Computer Numerical Control) machines.
+%G0, G1, G2, G3, G5
+%https://marlinfw.org/docs/gcode/G000-G001.html
+Then, we introduce mathematical background related to motion and behavior GCodes of the CNC machine.
+Finally, we give our \texttt{Python} codes that creates an animation for a tangential cutter by reading a \texttt{.gcode} file.
+\end{block}
+
+\end{frame}
+
+%
+
+\begin{frame}{}{}
+\frametitle{Outline of the Talk}
+
+Below, we explain the procedure on
+how we retrieve information from weekly course schedules in \texttt{DEBIS}.
+\begin{enumerate}
+\item Examining the target web page on web browser
+    \begin{enumerate}[i]
+    \item Playing with the objects
+    \item Inspecting the source
+    \end{enumerate}
+\item Reading data from the internet by using \texttt{Python}
+    \begin{enumerate}[i]
+    \item Getting list of academics
+    \item Reading department information
+    \item Getting weekly course data
+    \end{enumerate}
+\item Parsing data from the source by using \texttt{Python}
+    \begin{enumerate}[i]
+    \item Extracting timetable entries
+    \end{enumerate}
+\item Saving data to an \texttt{Excel Sheet} by using \texttt{Python}
+\item Processing data in the excel sheet by using \texttt{Python}
+\end{enumerate}
+
+\end{frame}
+
+%
+
+\section{GCodes}
+
+\begin{frame}{}{}
+\frametitle{\insertsectionhead}
+\framesubtitle{\insertsubsectionhead}
+
+%GCode general information
+%Some CNC/Vinyl Cutter photos
+GCode is a programming language used to control the movements and operations of CNC (Computer Numerical Control) machines.
+It specifies how the machine should move, how fast it should move, and what operations it should perform.
+
+
+\end{frame}
+
+%%
+
+\subsection{Some GCodes: Linear Motion G0-G1}
+
+\begin{frame}{}{}
+\frametitle{\insertsectionhead}
+\framesubtitle{\insertsubsectionhead}
+
+\textellipsis
+https://marlinfw.org/docs/gcode/G000-G001.html
+
+\end{frame}
+
+%%
+
+\subsection{Some GCodes: Circular Motion G2-G3}
+
+\begin{frame}{}{}
+\frametitle{\insertsectionhead}
+\framesubtitle{\insertsubsectionhead}
+
+\textellipsis
+https://marlinfw.org/docs/gcode/G002-G003.html
+
+\end{frame}
+
+%%
+
+\subsection{Some GCodes: Cubic Spline G5}
+
+\begin{frame}{}{}
+\frametitle{\insertsectionhead}
+\framesubtitle{\insertsubsectionhead}
+
+\textellipsis
+https://marlinfw.org/docs/gcode/G005.html
+
+\end{frame}
+
+%%
+
+\section{Curves Related to the GCodes: G0-G1, G2-G3, G5}
+
+%%
+
+\subsection{Some GCodes: Linear Motion G0-G1}
+
+\begin{frame}{}{}
+\frametitle{\insertsectionhead}
+\framesubtitle{\insertsubsectionhead}
+
+The line segment starting from the point $P_{0}$ and ending at the point $P_{1}$
+\begin{equation}
+\alpha(t):=P_{0}+t(P_{1}-P_{0}),\quad{}0\leq{}t\leq1,\nonumber
+\end{equation}
+whose tangent slope is the constant value
+\begin{equation}
+\alpha^{\prime}(t):=(P_{1}-P_{0}),\quad{}0\leq{}t\leq1,\nonumber
+\end{equation}
+
+\end{frame}
+
+%%
+
+\subsection{Some GCodes: Circular Motion G2-G3}
+
+\begin{frame}{}{}
+\frametitle{\insertsectionhead}
+\framesubtitle{\insertsubsectionhead}
+
+The circular arc centered at the point $P_{0}$ with radius $r$,
+starting at an angle $\theta_{0}$ and ending at an angle $\theta_{1}$
+\begin{equation}
+\alpha(t):=P_{0}+r\bigl(\cos(t),\sin(t)\bigr),\quad\theta_{0}\leq{}t\leq\theta_{1},\nonumber
+\end{equation}
+whose tangent slope is the circular curve
+\begin{equation}
+\alpha^{\prime}(t):=r\bigl(-\sin(t),\cos(t)\bigr),\quad\theta_{0}\leq{}t\leq\theta_{1}.\nonumber
+\end{equation}
+
+\end{frame}
+
+%%
+
+\subsection{Some GCodes: Cubic Spline G5}
+
+\begin{frame}{}{}
+\frametitle{\insertsectionhead}
+\framesubtitle{\insertsubsectionhead}
+
+Cubic B\'{e}zier curve starting at the point $P_{0}$, ending at the point $P_{3}$
+and with the additional control points $P_{1}$ and $P_{2}$
+\begin{equation}
+\alpha(t):=\sum_{i=0}^{3}\binom{3}{i}(1-t)^{3-i}t^{i}P_{i},\quad{}0\leq{}t\leq1,\nonumber
+\end{equation}
+whose tangent curve is
+\begin{equation}
+\begin{aligned}[]
+\alpha^{\prime}(t):={}&\sum_{i=0}^{2}\binom{3}{i}(3-i)(1-t)^{2-i}t^{i}P_{i}\\
+{}&+\sum_{i=1}^{3}\binom{3}{i}i(1-t)^{3-i}t^{i-1}P_{i},\quad{}0\leq{}t\leq1.
+\end{aligned}\nonumber
+\end{equation}
+\end{frame}
+
+%%
+
+\section{Animation Program Code}
+
+\begin{frame}{Animation Program Code}
+    \lstinputlisting[language=Python, firstline=1, lastline=17]{gcode-scatter(2025.01.06).py}
+\end{frame}
+
+%%
+
+\begin{frame}{Animation Program Code}
+    \lstinputlisting[language=Python, firstline=20, lastline=24]{gcode-scatter(2025.01.06).py}
+    \lstinputlisting[language=Python, firstline=27, lastline=29]{gcode-scatter(2025.01.06).py}
+    \lstinputlisting[language=Python, firstline=27, lastline=29]{gcode-scatter(2025.01.06).py}
+\end{frame}
+
+%%
+
+%\begin{frame}{Animation Program Code}
+%    \lstinputlisting[language=Python, firstline=1, lastline=17]{gcode-scatter(2025.01.06).py}
+%\end{frame}
+
+%%
+
+\begin{frame}
+%
+Thank you very much for your interest to our talk.\bigskip\\
+%We also would like to express our sincere thanks to\smallskip\\
+%
+%\begin{quote}
+%\begin{adjustwidth}{3em}{1em}
+%\colorbox{black}{\textcolor{white}{{\Large print(}\textcolor{pythongreen}{\Large "Dr.~Volkan \"{O}\u{g}er"}\textcolor{white}{\Large )}}}
+%\end{adjustwidth}
+%\end{quote}
+%for giving us some directions to make this project complete.
+%
+\end{frame}
+
+\end{document}
